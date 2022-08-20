@@ -1,4 +1,15 @@
 {
+  "name": "Buddy-Savings",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Alao-Abiodun/user-buddy_saving-API.git",
+  "author": "Alao-Abiodun <46402042+Alao-Abiodun@users.noreply.github.com>",
+  "license": "MIT",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "ts-node-dev --respawn --transpile-only ./src/index.ts",
+    "build": "tsc"
+  },
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
@@ -7,6 +18,7 @@
     "jsonwebtoken": "^8.5.1",
     "mysql": "^2.18.1",
     "mysql2": "^2.3.3",
+    "pg": "^8.7.3",
     "sequelize": "^6.21.4",
     "typescript": "^4.7.4"
   },
@@ -16,6 +28,8 @@
     "@types/dotenv": "^8.2.0",
     "@types/express": "^4.17.13",
     "@types/jsonwebtoken": "^8.5.8",
+    "@types/pg": "^8.6.5",
+    "@types/sequelize": "^4.28.14",
     "eslint": "^8.22.0",
     "nodemon": "^2.0.19",
     "ts-node-dev": "^2.0.0"

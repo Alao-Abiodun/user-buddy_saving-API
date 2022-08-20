@@ -93,6 +93,12 @@ BuddySaving.init({
     timestamps: true,
     sequelize: sequelizeConnection,
     paranoid: true
-}).belongsTo(User, { foreignKey: 'user_id' });
+})
+// .belongsTo(User, { foreignKey: 'user_id' });
+
+BuddySaving.belongsTo(User, { foreignKey: {
+    allowNull: false,
+    field: 'user_id',
+} });
 
 export { BuddySaving }
