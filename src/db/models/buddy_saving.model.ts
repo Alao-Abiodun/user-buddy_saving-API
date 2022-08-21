@@ -45,7 +45,7 @@ class BuddySaving extends Model<buddySavingAttributes, buddySavingInput> impleme
 
 BuddySaving.init({
     id: {
-        type: DataTypes.INTEGER.UNSIGNED,
+        type: DataTypes.INTEGER,
         autoIncrement: true,
         primaryKey: true,
     },
