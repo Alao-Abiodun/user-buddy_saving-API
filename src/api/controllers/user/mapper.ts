@@ -9,6 +9,5 @@ export const toUser = (user: UserOutput): User => {
         password: user.password,
         createdAt: user.createdAt,
         updatedAt: user.updatedAt,
-        deletedAt: user.deletedAt,
     }
 }

@@ -9,3 +9,7 @@ export const createBuddySaving = async (buddySaving: buddySavingInput): Promise<
     const newBuddySaving = await BuddySaving.create({ title, number_of_buddies_invite, savings_target, saving_pattern, saving_frequency, saving_start_date, total_money_to_save_in_a_year, total_money_to_save_in_a_month, relationship_type_with_buddies, user_id });
     return newBuddySaving;
 }
+
+export const inviteBuddy = async (title: string): Promise<any> => {
+    
+}

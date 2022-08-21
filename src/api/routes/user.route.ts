@@ -8,14 +8,20 @@ userRouter.post('/signup', async (req: Request, res: Response) => {
   const payload:CreateUserDTO = req.body
 
   const result = await userController.create(payload)
-  return res.status(200).send(result)
+  return res.status(200).send({
+    message: 'User account created successfully',
+    result
+  })
 })
 
 // for loginUser
 userRouter.post('/login', async (req: Request, res: Response) => {
   const {email, password} = req.body 
   const result = await userController.login(email, password)
-  return res.status(200).send(result)
+  return res.status(200).send({
+    message: 'User logged in successfully',
+    user: result
+  })
 } )
 
 export default userRouter

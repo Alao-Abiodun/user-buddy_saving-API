@@ -15,8 +15,9 @@ export const createUser = async (user: UserInput): Promise<UserOutput> => {
 }
 
 // login user with jsonwebtoken and check if password is correct
-export const loginUser = async (email: string, password: string): Promise<UserOutput> => {
+export const loginUser = async (email: string, password: string): Promise<any> => {    
     const user = await User.findOne({ where: { email } });
+    console.log('USER: ',user);
     if (!user) {
         throw new Error('User not found');
     }
@@ -27,5 +28,5 @@ export const loginUser = async (email: string, password: string): Promise<UserOu
 
     // const token: string | number = jsonwebtoken.sign({ userId: user.id }, process.env.JWT_SECRET as string, { expiresIn: '1h' });
 
-    return { ...user } ;
+    return {...user.dataValues }; 
 }

@@ -16,6 +16,5 @@ export const toBuddySaving = (buddySaving: buddySavingOutput): BuddySaving => {
         user_id: buddySaving.user_id,
         createdAt: buddySaving.createdAt,
         updatedAt: buddySaving.updatedAt,
-        deletedAt: buddySaving.deletedAt,
     }
 }

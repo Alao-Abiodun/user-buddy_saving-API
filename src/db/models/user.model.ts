@@ -9,7 +9,6 @@ interface UserAttributes {
   password: string;
   createdAt?: Date;
   updatedAt?: Date;
-  deletedAt?: Date;
 }
 
 export interface UserInput extends Optional<UserAttributes, 'id' | 'name' | 'email' | 'password'> {}
@@ -24,7 +23,6 @@ class User extends Model<UserAttributes, UserInput> implements UserAttributes {
   // timestamps!
   public readonly createdAt!: Date;
   public readonly updatedAt!: Date;
-  public readonly deletedAt!: Date;
 }
 
 User.init({
@@ -51,7 +49,7 @@ User.init({
     }
       },
 }, {
-  timestamps: true,
+  timestamps: false,
   sequelize: sequelizeConnection,
   paranoid: true
 })
